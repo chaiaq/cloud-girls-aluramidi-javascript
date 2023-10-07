@@ -1,8 +1,21 @@
+// evitando que sejam passados elementos diferentes de áudio
+function tocaSom (seletorAudio) {
+    const elemento = document.querySelector(seletorAudio);
+
+    if (elemento != null && elemento.localName === 'audio') {
+        elemento.play();        
+    } else {
+        alert('Elemento não encontrado');
+    }
+
+}
+
+/*
 function tocaSom(idElementoAudio) {
     document.querySelector(idElementoAudio).play();
     
 }
-
+*/
 
 const listaDeTeclas = document.querySelectorAll('.tecla');
 // irá gerar a lista de teclas captadas pelo querySelectorAll
